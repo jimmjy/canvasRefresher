@@ -5,5 +5,14 @@ body {
 #canvas {
     border: 1px solid black;
     display: block;
+    position: relative;
+}
+
+#canvas-two {
+    border: 1px solid red;
+    display: block;
+    position: absolute;
+    top: 0;
+    background: white;
 }
 

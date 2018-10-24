@@ -74,10 +74,10 @@ circle.prototype.update = function () {
     this.x += this.dx;
     this.y += this.dy;
 
-    if (mouse.x - this.x < 50 && mouse.x - this.x > -50 && mouse.y - this.y < 50 && mouse.y - this.y > -50 && this.radius < 40) {
-        this.radius += 1;
+    if (mouse.x - this.x < 50 && mouse.x - this.x > -50 && mouse.y - this.y < 50 && mouse.y - this.y > -50 && this.radius < 80) {
+        this.radius += 1.5;
     } else if (this.radius > 10) {
-        this.radius -= 1;
+        this.radius -= 1.5;
     }
 
     //draws the circle
@@ -88,7 +88,7 @@ circle.prototype.update = function () {
 const circleArray = [];
 
 //push new instances of circles to array
-for (i = 0; i < 200; i++) {
+for (i = 0; i < 500; i++) {
     circleArray.push(new circle(Math.floor(Math.random() * (innerWidth - 30 * 2)) + 30, Math.floor(Math.random() * (innerHeight - 30 * 2)) + 30));
 }
 
@@ -114,6 +114,7 @@ window.addEventListener('mousemove', (e) => {
     mouse.y = e.y;
 });
 
+window.addEventListener('deviceorientation')
 
 
 
